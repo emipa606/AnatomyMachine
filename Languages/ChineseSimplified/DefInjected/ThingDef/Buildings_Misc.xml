@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LingBuilding_Dismemberment.label>多功能解剖机</LingBuilding_Dismemberment.label>
+  <LingBuilding_Dismemberment.description>一台机器,可以以多种模式对置入其中的生物进行解剖</LingBuilding_Dismemberment.description>
+  <LingBuilding_Dismemberment_Blueprint.label>多功能解剖机(蓝图)</LingBuilding_Dismemberment_Blueprint.label>
+  <LingBuilding_Dismemberment_Frame.label>多功能解剖机(建造中)</LingBuilding_Dismemberment_Frame.label>
+  <LingBuilding_Dismemberment_Frame.description>一台机器,可以以多种模式对置入其中的生物进行解剖</LingBuilding_Dismemberment_Frame.description>
+</LanguageData>

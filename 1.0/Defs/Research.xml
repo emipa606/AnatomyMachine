@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- To add a research tab, make a new ResearchTabDef here and then set the <tab> field of your research project to match it -->
+  <ResearchTabDef>
+    <defName>LingAge</defName>
+    <label>Dark age</label>
+  </ResearchTabDef>
+  <ResearchProjectDef>
+    <defName>LingResearchProject_Dismemberment</defName>
+    <label>Anatomy machine</label>
+    <description>A machine that can dismember the creatures placed in accordance with various needs.</description>
+    <baseCost>200</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>LingAge</tab>
+    <prerequisites>
+      <li>Cryptosleep</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>1</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+</Defs>

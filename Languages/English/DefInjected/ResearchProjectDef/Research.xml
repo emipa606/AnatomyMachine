@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- To add a research tab, make a new ResearchTabDef here and then set the <tab> field of your research project to match it -->
+  <LingResearchProject_Dismemberment.label>Anatomy machine</LingResearchProject_Dismemberment.label>
+  <LingResearchProject_Dismemberment.description>A machine that can dismember the creatures placed in accordance with various needs.</LingResearchProject_Dismemberment.description>
+</LanguageData>

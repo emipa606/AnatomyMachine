@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ZuiDaLiYi>maximum profit</ZuiDaLiYi>
+  <WanQuanShouGe>Complete harvest</WanQuanShouGe>
+  <ZiDingYi>Custom mode</ZiDingYi>
+  <WorkMode>work mode</WorkMode>
+  <NextMode>switch mode</NextMode>
+  <NextModeDesc>Switch to the next working mode</NextModeDesc>
+  <StartDismemberment>Anatomy!</StartDismemberment>
+  <StartDismembermentDesc>Dealing with the poor victims</StartDismembermentDesc>
+  <ZiDingYiMain>Custom mode menu</ZiDingYiMain>
+  <ZiDingYiMainDesc>Customize the organ you want to harvest</ZiDingYiMainDesc>
+  <ChooseBodypartWindowMain>Anatomy machine setting</ChooseBodypartWindowMain>
+  <ChooseBodypartWindowDesc>Select the organ you want to harvest, remember to close this page after the selection and then perform other operations, otherwise an error may occur.</ChooseBodypartWindowDesc>
+  <ChooseBodypartWindowSel>Select/cancel anatomy of the part</ChooseBodypartWindowSel>
+</LanguageData>

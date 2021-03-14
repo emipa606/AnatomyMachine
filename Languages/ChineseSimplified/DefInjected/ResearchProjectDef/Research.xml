@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- To add a research tab, make a new ResearchTabDef here and then set the <tab> field of your research project to match it -->
+  <LingResearchProject_Dismemberment.label>多功能解剖机</LingResearchProject_Dismemberment.label>
+  <LingResearchProject_Dismemberment.description>一台机器,可以以多种模式对置入其中的生物进行解剖.</LingResearchProject_Dismemberment.description>
+</LanguageData>

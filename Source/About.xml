@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+  <name>Anatomy machine</name>
+  <author>LingLuo</author>
+  <supportedVersions>
+    <li>1.0</li>
+  </supportedVersions>
+  <description>A machine that can dismember the creatures placed in accordance with various needs
+	</description>
+</ModMetaData>

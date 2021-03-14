@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>LingBuilding_Dismemberment</defName>
+    <label>Anatomy machine</label>
+    <description>A machine that can dismember the creatures placed in accordance with various needs</description>
+    <thingClass>LingMod.Building_Dismemberment</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/LingBuilding_Dismemberment</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1, 2)</drawSize>
+      <shadowData>
+        <volume>(0.83, 0.3, 1.7)</volume>
+      </shadowData>
+    </graphicData>
+    <researchPrerequisites>
+      <li>LingResearchProject_Dismemberment</li>
+    </researchPrerequisites>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <WorkToBuild>3200</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(1,2)</size>
+    <designationCategory>Misc</designationCategory>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(1,0,0)</interactionCellOffset>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <costList>
+      <Steel>200</Steel>
+      <Uranium>5</Uranium>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+    </comps>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+  </ThingDef>
+</Defs>

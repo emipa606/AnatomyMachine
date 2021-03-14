@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ZuiDaLiYi>最大利益</ZuiDaLiYi>
+  <WanQuanShouGe>完全收割</WanQuanShouGe>
+  <ZiDingYi>自定义模式</ZiDingYi>
+  <WorkMode>工作模式</WorkMode>
+  <NextMode>切换模式</NextMode>
+  <NextModeDesc>切换到下一工作模式</NextModeDesc>
+  <StartDismemberment>解剖</StartDismemberment>
+  <StartDismembermentDesc>对其中可怜的牺牲者进行处理</StartDismembermentDesc>
+  <ZiDingYiMain>自定义模式菜单</ZiDingYiMain>
+  <ZiDingYiMainDesc>自定义你要收割的器官</ZiDingYiMainDesc>
+  <ChooseBodypartWindowMain>解剖机设置界面</ChooseBodypartWindowMain>
+  <ChooseBodypartWindowDesc>选择你要收割的器官,切记在选择之后关闭本页面再进行其他操作,否则可能会产生错误</ChooseBodypartWindowDesc>
+  <ChooseBodypartWindowSel>选择/取消解剖该部件</ChooseBodypartWindowSel>
+</LanguageData>

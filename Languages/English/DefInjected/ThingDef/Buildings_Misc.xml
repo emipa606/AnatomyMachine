@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LingBuilding_Dismemberment.label>Anatomy machine</LingBuilding_Dismemberment.label>
+  <LingBuilding_Dismemberment.description>A machine that can dismember the creatures placed in accordance with various needs</LingBuilding_Dismemberment.description>
+  <LingBuilding_Dismemberment_Blueprint.label>Anatomy machine (blueprint)</LingBuilding_Dismemberment_Blueprint.label>
+  <LingBuilding_Dismemberment_Frame.label>Anatomy machine (building)</LingBuilding_Dismemberment_Frame.label>
+  <LingBuilding_Dismemberment_Frame.description>A machine that can dismember the creatures placed in accordance with various needs</LingBuilding_Dismemberment_Frame.description>
+</LanguageData>
