@@ -29,7 +29,7 @@ namespace LingMod
             }
         }
 
-        public override Vector2 InitialSize => new(640f, 480f);
+        public override Vector2 InitialSize => new Vector2(640f, 480f);
 
         public override void DoWindowContents(Rect inRect)
         {
