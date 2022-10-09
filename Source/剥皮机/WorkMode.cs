@@ -1,9 +1,8 @@
-﻿namespace LingMod
+﻿namespace LingMod;
+
+public enum WorkMode
 {
-    public enum WorkMode
-    {
-        Modea,
-        Modeb,
-        Modec
-    }
+    Modea,
+    Modeb,
+    Modec
 }

@@ -1,22 +1,21 @@
 ﻿using Verse;
 
-namespace LingMod
+namespace LingMod;
+
+public class KeyValuePairsA
 {
-    public class KeyValuePairsA
+    public KeyValuePairsA(BodyPartRecord Key, bool value)
     {
-        public KeyValuePairsA(BodyPartRecord Key, bool value)
-        {
-            this.Key = Key;
-            Value = value;
-        }
+        this.Key = Key;
+        Value = value;
+    }
 
-        public BodyPartRecord Key { get; }
+    public BodyPartRecord Key { get; }
 
-        public bool Value { get; private set; }
+    public bool Value { get; private set; }
 
-        public void SetValue(bool value)
-        {
-            Value = value;
-        }
+    public void SetValue(bool value)
+    {
+        Value = value;
     }
 }
