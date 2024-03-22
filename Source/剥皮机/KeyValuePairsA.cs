@@ -2,17 +2,11 @@
 
 namespace LingMod;
 
-public class KeyValuePairsA
+public class KeyValuePairsA(BodyPartRecord Key, bool value)
 {
-    public KeyValuePairsA(BodyPartRecord Key, bool value)
-    {
-        this.Key = Key;
-        Value = value;
-    }
+    public BodyPartRecord Key { get; } = Key;
 
-    public BodyPartRecord Key { get; }
-
-    public bool Value { get; private set; }
+    public bool Value { get; private set; } = value;
 
     public void SetValue(bool value)
     {

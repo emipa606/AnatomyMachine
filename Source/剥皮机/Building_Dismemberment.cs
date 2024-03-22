@@ -7,7 +7,7 @@ namespace LingMod;
 
 public class Building_Dismemberment : Building_CryptosleepCasket
 {
-    public readonly List<KeyValuePairsA> pairsAs = new List<KeyValuePairsA>();
+    public readonly List<KeyValuePairsA> pairsAs = [];
     private WorkMode workMode = WorkMode.Modea; //默认是第一个工作模式
     public Pawn Pan => innerContainer.First() as Pawn; //寻取第一个内容物
     public List<BodyPartRecord> bodyParts => Pan.health.hediffSet.GetNotMissingParts().ToList();

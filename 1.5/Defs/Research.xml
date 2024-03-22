@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- To add a research tab, make a new ResearchTabDef here and then set the <tab> field of your research project to match it -->
+  <ResearchProjectDef>
+    <defName>LingResearchProject_Dismemberment</defName>
+    <label>Anatomy machine</label>
+    <description>A machine that can dismember the creatures placed in accordance with various needs.</description>
+    <baseCost>200</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Cryptosleep</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>15.00</researchViewX>
+    <researchViewY>0.85</researchViewY>
+  </ResearchProjectDef>
+</Defs>
