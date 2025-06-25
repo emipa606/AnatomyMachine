@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Anatomy machine -->
+  <LingBuilding_Dismemberment.label>Anatomy machine</LingBuilding_Dismemberment.label>
+  <!-- EN: A machine that can dismember the creatures placed in accordance with various needs -->
+  <LingBuilding_Dismemberment.description>A machine that can dismember the creatures placed in accordance with various needs</LingBuilding_Dismemberment.description>
+</LanguageData>

@@ -7,17 +7,17 @@ namespace LingMod;
 
 public class Building_Dismemberment : Building_CryptosleepCasket
 {
-    public readonly List<KeyValuePairsA> pairsAs = [];
+    public readonly List<KeyValuePairsA> PairsAs = [];
     private WorkMode workMode = WorkMode.Modea; //默认是第一个工作模式
     public Pawn Pan => innerContainer.First() as Pawn; //寻取第一个内容物
-    public List<BodyPartRecord> bodyParts => Pan.health.hediffSet.GetNotMissingParts().ToList();
+    public List<BodyPartRecord> BodyParts => Pan.health.hediffSet.GetNotMissingParts().ToList();
 
-    private List<BodyPartRecord> modeCBodyparts
+    private List<BodyPartRecord> ModeCBodyguards
     {
         get
         {
             var bodies = new List<BodyPartRecord>();
-            foreach (var item in pairsAs)
+            foreach (var item in PairsAs)
             {
                 if (item.Value)
                 {
@@ -46,7 +46,7 @@ public class Building_Dismemberment : Building_CryptosleepCasket
                 break;
         }
 
-        return text + "\n " + "WorkMode".Translate() + "\n " + str;
+        return $"{text}\n " + "WorkMode".Translate() + "\n " + str;
     } //显示工作模式
 
     public override IEnumerable<Gizmo> GetGizmos()
@@ -89,7 +89,7 @@ public class Building_Dismemberment : Building_CryptosleepCasket
             defaultDesc = "StartDismembermentDesc".Translate(),
             icon = DismembermentTieTu.DongShou,
 
-            action = delegate { BoPi(Pan); }
+            action = delegate { boPi(Pan); }
         };
         if (workMode == WorkMode.Modec)
         {
@@ -110,7 +110,7 @@ public class Building_Dismemberment : Building_CryptosleepCasket
         Scribe_Values.Look(ref workMode, "workMode");
     }
 
-    private void BoPi(Pawn pawn)
+    private void boPi(Pawn pawn)
     {
         /*foreach (Hediff hediff in pawn.health.hediffSet.hediffs)
         {
@@ -120,54 +120,61 @@ public class Building_Dismemberment : Building_CryptosleepCasket
                 pawn.health.RemoveHediff(hediff);
             }
         }*/
-        var Allpart = pawn.health.hediffSet.GetNotMissingParts().ToList();
-        if (workMode == WorkMode.Modea)
+        var bodyPartRecords = pawn.health.hediffSet.GetNotMissingParts().ToList();
+        switch (workMode)
         {
-            foreach (var part in Allpart)
+            case WorkMode.Modea:
             {
-                if (part.def.spawnThingOnRemoved == null ||
-                    !pawn.health.hediffSet.GetNotMissingParts().Contains(part) || part.IsCorePart)
+                foreach (var part in bodyPartRecords)
                 {
-                    continue;
-                }
+                    if (part.def.spawnThingOnRemoved == null ||
+                        !pawn.health.hediffSet.GetNotMissingParts().Contains(part) || part.IsCorePart)
+                    {
+                        continue;
+                    }
 
-                pawn.health.AddHediff(HediffDefOf.MissingBodyPart, part);
+                    pawn.health.AddHediff(HediffDefOf.MissingBodyPart, part);
 
-                GenSpawn.Spawn(ThingMaker.MakeThing(part.def.spawnThingOnRemoved), InteractionCell, Map);
-            }
-        }
-
-        if (workMode == WorkMode.Modeb)
-        {
-            foreach (var part in Allpart)
-            {
-                if (!pawn.health.hediffSet.GetNotMissingParts().Contains(part) || part.IsCorePart)
-                {
-                    continue;
-                }
-
-                pawn.health.AddHediff(HediffDefOf.MissingBodyPart, part);
-                if (part.def.spawnThingOnRemoved != null)
-                {
                     GenSpawn.Spawn(ThingMaker.MakeThing(part.def.spawnThingOnRemoved), InteractionCell, Map);
                 }
+
+                break;
             }
-        }
-
-        if (workMode == WorkMode.Modec)
-        {
-            foreach (var part in modeCBodyparts)
+            case WorkMode.Modeb:
             {
-                if (!pawn.health.hediffSet.GetNotMissingParts().Contains(part) || part.IsCorePart)
+                foreach (var part in bodyPartRecords)
                 {
-                    continue;
+                    if (!pawn.health.hediffSet.GetNotMissingParts().Contains(part) || part.IsCorePart)
+                    {
+                        continue;
+                    }
+
+                    pawn.health.AddHediff(HediffDefOf.MissingBodyPart, part);
+                    if (part.def.spawnThingOnRemoved != null)
+                    {
+                        GenSpawn.Spawn(ThingMaker.MakeThing(part.def.spawnThingOnRemoved), InteractionCell, Map);
+                    }
                 }
 
-                pawn.health.AddHediff(HediffDefOf.MissingBodyPart, part);
-                if (part.def.spawnThingOnRemoved != null)
+                break;
+            }
+            case WorkMode.Modec:
+            {
+                foreach (var part in ModeCBodyguards)
                 {
-                    GenSpawn.Spawn(ThingMaker.MakeThing(part.def.spawnThingOnRemoved), InteractionCell, Map);
+                    if (!pawn.health.hediffSet.GetNotMissingParts().Contains(part) || part.IsCorePart)
+                    {
+                        continue;
+                    }
+
+                    pawn.health.AddHediff(HediffDefOf.MissingBodyPart, part);
+                    if (part.def.spawnThingOnRemoved != null)
+                    {
+                        GenSpawn.Spawn(ThingMaker.MakeThing(part.def.spawnThingOnRemoved), InteractionCell, Map);
+                    }
                 }
+
+                break;
             }
         }
 

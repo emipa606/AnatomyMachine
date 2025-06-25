@@ -19,17 +19,17 @@ public class ChooseBodypartWindow : Window
         doCloseX = true;
         instructionString = "ChooseBodypartWindowDesc".Translate();
         this.thing = thing;
-        var bodyParts = (from x in thing.bodyParts
+        var bodyParts = (from x in thing.BodyParts
             where !x.IsCorePart
             select x).ToList();
-        thing.pairsAs.Clear();
+        thing.PairsAs.Clear();
         foreach (var item in bodyParts)
         {
-            thing.pairsAs.Add(new KeyValuePairsA(item, false));
+            thing.PairsAs.Add(new KeyValuePairsA(item, false));
         }
     }
 
-    public override Vector2 InitialSize => new Vector2(640f, 480f);
+    public override Vector2 InitialSize => new(640f, 480f);
 
     public override void DoWindowContents(Rect inRect)
     {
@@ -44,14 +44,14 @@ public class ChooseBodypartWindow : Window
         var rect3 = new Rect(rect2);
         rect3.width -= 16f;
         var num = (Text.LineHeight * 2.25f) + 2f;
-        var num2 = thing.pairsAs.Count > 0 ? (thing.pairsAs.Count + 1) * num : 0f;
+        var num2 = thing.PairsAs.Count > 0 ? (thing.PairsAs.Count + 1) * num : 0f;
         rect3.height = num2;
         Widgets.BeginScrollView(rect2, ref resultsAreaScroll, rect3);
         var rect4 = new Rect(rect3) { height = num };
 
-        if (thing.pairsAs.Count > 0)
+        if (thing.PairsAs.Count > 0)
         {
-            foreach (var BodyPart in thing.pairsAs)
+            foreach (var BodyPart in thing.PairsAs)
             {
                 Widgets.DrawHighlightIfMouseover(rect4);
                 var rect6 = new Rect(rect4);
@@ -63,16 +63,16 @@ public class ChooseBodypartWindow : Window
                 var rect7 = new Rect(rect4);
                 rect7.width = rect7.width - rect6.width - (num * 2f);
                 rect7.x += rect6.width;
-                var strr = string.IsNullOrEmpty(BodyPart.Key.customLabel)
+                var customLabel = string.IsNullOrEmpty(BodyPart.Key.customLabel)
                     ? BodyPart.Key.LabelCap
                     : BodyPart.Key.customLabel;
 
                 if (BodyPart.Key.def.spawnThingOnRemoved != null)
                 {
-                    strr = strr + " $" + BodyPart.Key.def.spawnThingOnRemoved.BaseMarketValue;
+                    customLabel = $"{customLabel} ${BodyPart.Key.def.spawnThingOnRemoved.BaseMarketValue}";
                 }
 
-                Widgets.Label(rect7, strr);
+                Widgets.Label(rect7, customLabel);
                 var rect8 = new Rect(rect4);
                 rect8.width = rect8.height;
                 rect8.x = rect7.x + rect7.width;
