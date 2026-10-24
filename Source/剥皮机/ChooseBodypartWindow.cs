@@ -33,7 +33,6 @@ public class ChooseBodypartWindow : Window
 
     public override void DoWindowContents(Rect inRect)
     {
-        //throw new NotImplementedException();
         Text.Font = GameFont.Small;
         var rect = new Rect(inRect);
         rect.height = Text.CalcHeight(instructionString, rect.width) + 2f;
@@ -81,18 +80,14 @@ public class ChooseBodypartWindow : Window
                 {
                     if (Widgets.ButtonImage(rect8.ContractedBy(rect8.width / 4f), DismembermentTieTu.DuiDui))
                     {
-                        //BodyPart.Value =!BodyPart.Value;
                         BodyPart.SetValue(false);
-                        //this.Close();
                     }
                 }
                 else
                 {
                     if (Widgets.ButtonImage(rect8.ContractedBy(rect8.width / 4f), DismembermentTieTu.BuBuDui))
                     {
-                        //BodyPart.Value =!BodyPart.Value;
                         BodyPart.SetValue(true);
-                        //this.Close();
                     }
                 }
 

@@ -9,7 +9,7 @@ public class Building_Dismemberment : Building_CryptosleepCasket
 {
     public readonly List<KeyValuePairsA> PairsAs = [];
     private WorkMode workMode = WorkMode.Modea; //默认是第一个工作模式
-    public Pawn Pan => innerContainer.First() as Pawn; //寻取第一个内容物
+    public Pawn Pan => innerContainer[0] as Pawn; //寻取第一个内容物
     public List<BodyPartRecord> BodyParts => Pan.health.hediffSet.GetNotMissingParts().ToList();
 
     private List<BodyPartRecord> ModeCBodyguards
@@ -112,14 +112,6 @@ public class Building_Dismemberment : Building_CryptosleepCasket
 
     private void boPi(Pawn pawn)
     {
-        /*foreach (Hediff hediff in pawn.health.hediffSet.hediffs)
-        {
-            if (hediff.def.spawnThingOnRemoved != null)
-            {
-                GenSpawn.Spawn(ThingMaker.MakeThing(hediff.def.spawnThingOnRemoved), this.InteractionCell, this.Map);
-                pawn.health.RemoveHediff(hediff);
-            }
-        }*/
         var bodyPartRecords = pawn.health.hediffSet.GetNotMissingParts().ToList();
         switch (workMode)
         {
